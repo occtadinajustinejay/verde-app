@@ -875,12 +875,10 @@ function initializeVERDE() {
 
 initializeVERDE();
 
-// EMOJI PICKER
+// 
 const emojiToggle = document.getElementById("emojiToggle");
 const emojiPicker = document.getElementById("emojiPicker");
-const postCaption = document.getElementById("postCaption");
-
-// Open and close emoji picker
+// Open and close 
 emojiToggle.addEventListener("click", () => {
     emojiPicker.hidden = !emojiPicker.hidden;
 });
