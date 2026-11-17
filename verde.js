@@ -799,7 +799,6 @@ function renderProfile() {
         STORAGE_KEYS.profile
     );
 
-
     document.getElementById("profileName").textContent =
         profile.name || "My VERDE Profile";
 
