@@ -1,8 +1,6 @@
 //Verde app Where i have my own liesure time :3
 //If 
 
-
-
 // ============================================
 // VERDE — MAIN JAVASCRIPT
 // A world of your own. ✦
