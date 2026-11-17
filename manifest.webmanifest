@@ -1,0 +1,12 @@
+
+{
+  "name": "VERDE - A world of your own",
+  "short_name": "VERDE",
+  "description": "A world of your own.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F2EBDD",
+  "theme_color": "#10251D",
+  "icons": []
+}
