@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#10251D">
+    <meta name="description" content="VERDE — A world of your own.">
+
+    <title>VERDE — A World of Your Own</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script src="verde.js" defer></script>
+    <link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#10251D">
+</head>
+
+<body>
+
+    <!-- =================================
+         APP CONTAINER
+    ================================== -->
+
+    <div class="app-container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="brand">
+                <div class="brand-logo">✦</div>
+
+                <div class="brand-name">
+                    <h1>VERDE</h1>
+                    <span>A world of your own.</span>
+                </div>
+            </div>
+
+            <!-- MAIN NAVIGATION -->
+
+            <nav class="main-navigation">
+
+                <p class="nav-label">MENU</p>
+
+                <button class="nav-item active" data-view="home">
+                    <span>⌂</span>
+                    <span>Home</span>
+                </button>
+
+                <button class="nav-item" data-view="explore">
+                    <span>⌕</span>
+                    <span>Explore</span>
+                </button>
+
+                <button class="nav-item" data-view="create">
+                    <span>✎</span>
+                    <span>Create</span>
+                </button>
+
+                <button class="nav-item" data-view="videos">
+                    <span>▷</span>
+                    <span>Videos</span>
+                </button>
+
+                <button class="nav-item" data-view="notifications">
+                    <span>♧</span>
+                    <span>Notifications</span>
+                </button>
+
+                <button class="nav-item" data-view="messages">
+                    <span>✉</span>
+                    <span>Messages</span>
+                </button>
+
+                <p class="nav-label">PERSONAL SPACE</p>
+
+                <button class="nav-item" data-view="profile">
+                    <span>◎</span>
+                    <span>My Profile</span>
+                </button>
+
+                <button class="nav-item" data-view="library">
+                    <span>▤</span>
+                    <span>My Library</span>
+                </button>
+
+                <button class="nav-item" data-view="writing">
+                    <span>✧</span>
+                    <span>Writing Studio</span>
+                </button>
+
+                <button class="nav-item" data-view="music">
+                    <span>♫</span>
+                    <span>Music</span>
+                </button>
+
+                <button class="nav-item" data-view="settings">
+                    <span>⚙</span>
+                    <span>Settings</span>
+                </button>
+
+            </nav>
+
+            <!-- SIDEBAR FOOTER -->
+
+            <div class="sidebar-footer">
+                <div class="local-status">
+                    <span class="status-dot"></span>
+                    <span>Local Mode</span>
+                </div>
+
+                <p>VERDE © 2026</p>
+            </div>
+
+        </aside>
+
+
+        <!-- =================================
+             MAIN APPLICATION
+        ================================== -->
+
+        <main class="main-content">
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Toggle navigation"
+                >
+                    ☰
+                </button>
+
+                <div class="page-heading">
+                    <h2 id="pageTitle">Home</h2>
+                    <p id="pageSubtitle">
+                        Welcome to your little world.
+                    </p>
+                </div>
+
+                <div class="topbar-actions">
+
+                    <button
+                        class="icon-button"
+                        id="themeToggle"
+                        aria-label="Toggle theme"
+                    >
+                        ☾
+                    </button>
+
+                    <button
+                        class="profile-shortcut"
+                        data-view="profile"
+                        aria-label="Open profile"
+                    >
+                        A
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- CONTENT AREA -->
+
+            <div class="content-area">
+
+
+                <!-- =================================
+                     HOME VIEW
+                ================================== -->
+
+                <section class="page-view active" id="view-home">
+
+                    <div class="welcome-banner">
+
+                        <div>
+                            <span class="eyebrow">
+                                YOUR PERSONAL SPACE
+                            </span>
+
+                            <h1>Welcome back. <span>✦</span></h1>
+
+                            <p>
+                                Your world, your memories,
+                                your own little universe.
+                            </p>
+                        </div>
+
+                        <div class="welcome-decoration">
+                            
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUICK ACTIONS -->
+
+                    <div class="section-header">
+                        <h2>Quick Access</h2>
+                    </div>
+
+                    <div class="quick-actions">
+
+                        <button class="quick-card" data-view="create">
+                            <span>＋</span>
+                            <strong>Create Post</strong>
+                            <small>Share something new</small>
+                        </button>
+
+                        <button class="quick-card" data-view="writing">
+                            <span>✎</span>
+                            <strong>Write Something</strong>
+                            <small>Your creative space</small>
+                        </button>
+
+                        <button class="quick-card" data-view="library">
+                            <span>▤</span>
+                            <strong>My Library</strong>
+                            <small>Your saved memories</small>
+                        </button>
+
+                    </div>
+
+
+                    <!-- STORIES -->
+
+                    <div class="section-header">
+                        <h2>My Day</h2>
+
+                        <button class="text-button" data-view="create">
+                            Add Story +
+                        </button>
+                    </div>
+
+                    <div class="stories-container">
+
+                        <button class="story-item" data-view="create">
+                            <div class="story-circle add-story">
+                                +
+                            </div>
+                            <span>My Story</span>
+                        </button>
+
+                    </div>
+
+
+                    <!-- FEED -->
+
+                    <div class="section-header feed-heading">
+                        <h2>Your Feed</h2>
+                    </div>
+
+                    <div class="feed-tabs">
+
+                        <button class="feed-tab active" data-feed="following">
+                            Following
+                        </button>
+
+                        <button class="feed-tab" data-feed="for-you">
+                            For You
+                        </button>
+
+                    </div>
+
+                    <div class="feed-container" id="feedContainer">
+
+                        <div class="empty-state">
+
+                            <div class="empty-icon">✦</div>
+
+                            <h3>Your space is waiting.</h3>
+
+                            <p>
+                                Create your first post and
+                                start filling your world.
+                            </p>
+
+                            <button class="primary-button" data-view="create">
+                                Create a Post
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <p class="simulation-notice">
+                        Personal preview · No real community activity
+                    </p>
+
+                </section>
+
+
+
+                <!-- =================================
+                     EXPLORE VIEW
+                ================================== -->
+
+                <section class="page-view" id="view-explore">
+
+                    <div class="section-header">
+                        <h2>Explore</h2>
+                    </div>
+
+                    <div class="search-container">
+
+                        <input
+                            type="search"
+                            id="exploreSearch"
+                            placeholder="Search your content..."
+                        >
+
+                        <button id="searchButton">
+                            Search
+                        </button>
+
+                    </div>
+
+                    <div class="empty-state">
+                        <div class="empty-icon">⌕</div>
+                        <h3>Discover your interests.</h3>
+                        <p>
+                            Your personal discovery space
+                            will appear here.
+                        </p>
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     CREATE VIEW
+                ================================== -->
+
+                <section class="page-view" id="view-create">
+
+                    <div class="section-header">
+                        <h2>Create Something</h2>
+                    </div>
+
+                    <div class="creator-container">
+
+                        <form id="postForm">
+
+                            <label for="postCaption">
+                                What's on your mind?
+                            </label>
+
+                            <textarea
+                                id="postCaption"
+                                placeholder="Write something..."
+                                rows="5"
+
+<div class="emoji-tools">
+    <button type="button" id="emojiToggle">
+        Add Emoji
+    </button>
+
+    <div id="emojiPicker" class="emoji-picker" hidden>
+        <button type="button" class="emoji-option">😀</button>
+        <button type="button" class="emoji-option">😂</button>
+        <button type="button" class="emoji-option">🥹</button>
+        <button type="button" class="emoji-option">😭</button>
+        <button type="button" class="emoji-option">❤️</button>
+        <button type="button" class="emoji-option">💚</button>
+        <button type="button" class="emoji-option">✨</button>
+        <button type="button" class="emoji-option">🌿</button>
+        <button type="button" class="emoji-option">🫪</button>
+        <button type="button" class="emoji-option">🐰</button>
+        <button type="button" class="emoji-option">🎀</button>
+        <button type="button" class="emoji-option">🦋</button>
+    </div>
+</div>
+
+                            ></textarea>
+
+                            <label for="postMedia">
+                                Add Photos or Videos
+                            </label>
+
+                            <input
+                                type="file"
+                                id="postMedia"
+                                accept="image/*,video/*"
+                                multiple
+                            >
+
+                            <div
+                                class="media-preview"
+                                id="mediaPreview"
+                            ></div>
+
+                            <button
+                                type="submit"
+                                class="primary-button"
+                            >
+                                Save Post
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     VIDEOS VIEW
+                ================================== -->
+
+                <section class="page-view" id="view-videos">
+
+                    <div class="section-header">
+                        <h2>Video Hub</h2>
+                    </div>
+
+                    <div class="empty-state">
+                        <div class="empty-icon">▷</div>
+                        <h3>Your video library.</h3>
+                        <p>
+                            Your locally saved videos
+                            will appear here.
+                        </p>
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     NOTIFICATIONS VIEW
+                ================================== -->
+
+                <section class="page-view" id="view-notifications">
+
+                    <div class="section-header">
+                        <h2>Notifications</h2>
+                    </div>
+
+                    <div class="empty-state">
+                        <div class="empty-icon">♧</div>
+                        <h3>All quiet here.</h3>
+                        <p>
+                            Your local activity notifications
+                            will appear here.
+                        </p>
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     MESSAGES VIEW
+                ================================== -->
+
+                <section class="page-view" id="view-messages">
+
+                    <div class="section-header">
+                        <h2>Messages</h2>
+                    </div>
+
+                    <div class="empty-state">
+                        <div class="empty-icon">✉</div>
+                        <h3>Your message space.</h3>
+                        <p>
+                            The messaging interface will
+                            be developed here.
+                        </p>
+                        <small>
+                            Real conversations require other users
+                            and an online service.
+                        </small>
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     PROFILE VIEW
+                ================================== -->
+
+                <section class="page-view" id="view-profile">
+
+                    <div class="profile-cover">
+
+                        <div class="profile-avatar">
+                            A
+                        </div>
+
+                    </div>
+
+                    <div class="profile-information">
+
+                        <h1 id="profileName">
+                            My VERDE Profile
+                        </h1>
+
+                        <p id="profileUsername">
+                            @myverde
+                        </p>
+
+                        <p id="profileBio">
+                            A little world of memories,
+                            creativity and stories. ✦
+                        </p>
+
+                        <button class="secondary-button" id="editProfile">
+                            Edit Profile
+                        </button>
+
+                    </div>
+
+                    <div class="profile-tabs">
+                        <button class="active">Posts</button>
+                        <button>Collections</button>
+                        <button>About</button>
+                    </div>
+
+                    <div class="profile-content" id="profileContent">
+
+                        <div class="empty-state">
+                            <h3>Your profile starts here.</h3>
+                            <p>Your personal content will appear here.</p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     LIBRARY VIEW
+                ================================== -->
+
+                <section class="page-view" id="view-library">
+
+                    <div class="section-header">
+                        <h2>My Library</h2>
+                    </div>
+
+                    <div class="library-categories">
+
+                        <button class="library-card">
+                            <span>▧</span>
+                            <strong>Photos</strong>
+                        </button>
+
+                        <button class="library-card">
+                            <span>▷</span>
+                            <strong>Videos</strong>
+                        </button>
+
+                        <button class="library-card">
+                            <span>♫</span>
+                            <strong>Music</strong>
+                        </button>
+
+                        <button class="library-card">
+                            <span>✎</span>
+                            <strong>Writing</strong>
+                        </button>
+
+                        <button class="library-card">
+                            <span>♡</span>
+                            <strong>Favorites</strong>
+                        </button>
+
+                        <button class="library-card">
+                            <span>▤</span>
+                            <strong>Collections</strong>
+                        </button>
+
+                    </div>
+
+                    <div class="empty-state">
+                        <h3>Your library is empty.</h3>
+                        <p>
+                            Your saved personal content
+                            will be organized here.
+                        </p>
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     WRITING STUDIO VIEW
+                ================================== -->
+
+                <section class="page-view" id="view-writing">
+
+                    <div class="section-header">
+                        <h2>Writing Studio</h2>
+                    </div>
+
+                    <div class="writing-container">
+
+                        <form id="writingForm">
+
+                            <input
+                                type="text"
+                                id="writingTitle"
+                                placeholder="Untitled creation..."
+                            >
+
+                            <textarea
+                                id="writingContent"
+                                rows="14"
+                                placeholder="Let your thoughts flow..."
+                            ></textarea>
+
+                            <button
+                                type="submit"
+                                class="primary-button"
+                            >
+                                Save Draft
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                    <div class="section-header">
+                        <h2>My Drafts</h2>
+                    </div>
+
+                    <div id="draftContainer">
+
+                        <div class="empty-state">
+                            <p>No saved drafts yet.</p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     MUSIC VIEW
+                ================================== -->
+
+                <section class="page-view" id="view-music">
+
+                    <div class="section-header">
+                        <h2>Music Hub</h2>
+                    </div>
+
+                    <div class="empty-state">
+                        <div class="empty-icon">♫</div>
+                        <h3>Your personal music space.</h3>
+                        <p>
+                            Local music files and playlists
+                            can be organized here.
+                        </p>
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     SETTINGS VIEW
+                ================================== -->
+
+                <section class="page-view" id="view-settings">
+
+                    <div class="section-header">
+                        <h2>Settings</h2>
+                    </div>
+
+                    <div class="settings-list">
+
+                        <button class="setting-item" data-setting="appearance">
+                            <span>◐</span>
+                            <div>
+                                <strong>Appearance</strong>
+                                <small>Light and dark mode</small>
+                            </div>
+                        </button>
+
+                        <button class="setting-item" data-setting="privacy">
+                            <span>♢</span>
+                            <div>
+                                <strong>Privacy</strong>
+                                <small>Manage personal preferences</small>
+                            </div>
+                        </button>
+
+                        <button class="setting-item" data-setting="storage">
+                            <span>▤</span>
+                            <div>
+                                <strong>Storage</strong>
+                                <small>Manage local storage</small>
+                            </div>
+                        </button>
+
+                        <button class="setting-item" data-setting="accessibility">
+                            <span>◎</span>
+                            <div>
+                                <strong>Accessibility</strong>
+                                <small>Text, motion and display</small>
+                            </div>
+                        </button>
+
+                        <button class="setting-item" data-setting="backup">
+                            <span>↥</span>
+                            <div>
+                                <strong>Backup & Recovery</strong>
+                                <small>Protect your personal content</small>
+                            </div>
+                        </button>
+
+                        <button class="setting-item" data-setting="about">
+                            <span>✦</span>
+                            <div>
+                                <strong>About VERDE</strong>
+                                <small>App information</small>
+                            </div>
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =================================
+         MOBILE NAVIGATION
+    ================================== -->
+
+    <nav class="mobile-navigation">
+
+        <button class="mobile-nav-item active" data-view="home">
+            <span>⌂</span>
+            <small>Home</small>
+        </button>
+
+        <button class="mobile-nav-item" data-view="explore">
+            <span>⌕</span>
+            <small>Explore</small>
+        </button>
+
+        <button class="mobile-nav-item" data-view="create">
+            <span>＋</span>
+            <small>Create</small>
+        </button>
+
+        <button class="mobile-nav-item" data-view="library">
+            <span>▤</span>
+            <small>Library</small>
+        </button>
+
+        <button class="mobile-nav-item" data-view="profile">
+            <span>◎</span>
+            <small>Profile</small>
+        </button>
+
+    </nav>
+
+
+</body>
+</html>
