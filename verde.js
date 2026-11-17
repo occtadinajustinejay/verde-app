@@ -906,6 +906,22 @@ document.querySelectorAll(".emoji-option").forEach(button => {
 });
 
 
+// VERDE OFFLINE SUPPORT
+
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker
+            .register("./service-worker.js")
+            .then(() => {
+                console.log("VERDE offline support is ready!");
+            })
+            .catch(error => {
+                console.error("Service worker registration failed:", error);
+            });
+    });
+}
+
+
 
 // ============================================
 // END OF VERDE JAVASCRIPT
